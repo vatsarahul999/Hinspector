@@ -1,0 +1,74 @@
+
+
+WARNING :: Do not use hash/pound symbol(SHIFT+3) while writing comments in the Hinsepector Grammar File
+
+Not using Dump in the file
+[\s]*[d,D][U,u][m,M][p,P][\s]+#Usage of DUMP
+
+
+Load Capital Case
+[\s]*[l][O,o][A,a][D,d][\s]+#Incorrect usage of keyword LOAD
+[\s]*[l,L][o][A,a][D,d][\s]+#Incorrect usage of keyword LOAD
+[\s]*[l,L][O,o][a][D,d][\s]+#Incorrect usage of keyword LOAD
+[\s]*[l,L][O,o][A,a][d][\s]+#Incorrect usage of keyword LOAD
+
+Using Capital Case
+[\s]*[U,u][S,s][I,i][s,S][g][\s]+#Incorrect usage of keyword USING
+[\s]*[U,u][S,s][I,i][s][g,G][\s]+#Incorrect usage of keyword USING
+[\s]*[U,u][S,s][i][s,S][g,G][\s]+#Incorrect usage of keyword USING
+[\s]*[U,u][s][I,i][s,S][g,G][\s]+#Incorrect usage of keyword USING
+[\s]*[u][S,s][I,i][s,S][g,G][\s]+#Incorrect usage of keyword USING
+
+As Capital Case
+[\s]*[a][s,S][\s]+#Incorrect usage of keyword AS 
+[\s]*[A,a][s][\s]+#Incorrect usage of keyword AS 
+
+Group Capital Case
+[\s]*[g,G][r,R][o,O][u,U][p][\s]+#Incorrect usage of keyword GROUP
+[\s]*[g,G][r,R][o,O][u][p,P][\s]+#Incorrect usage of keyword GROUP
+[\s]*[g,G][r,R][o][u,U][p,P][\s]+#Incorrect usage of keyword GROUP
+[\s]*[g,G][r][o,O][u,U][p,P][\s]+#Incorrect usage of keyword GROUP
+[\s]*[g][r,R][o,O][u,U][p,P][\s]+#Incorrect usage of keyword GROUP
+
+Filter Capital Case
+[\s]*[F,f][i,I][l,L][T,t][e,E][r][\s]+#Incorrect Usage of FILTER
+[\s]*[F,f][i,I][l,L][T,t][e][r,R][\s]+#Incorrect Usage of FILTER
+[\s]*[F,f][i,I][l,L][t][e,E][r,R][\s]+#Incorrect Usage of FILTER
+[\s]*[F,f][i,I][l][T,t][e,E][r,R][\s]+#Incorrect Usage of FILTER
+[\s]*[F,f][i][l,L][T,t][e,E][r,R][\s]+#Incorrect Usage of FILTER
+[\s]*[f][i,I][l,L][T,t][e,E][r,R][\s]+#Incorrect Usage of FILTER
+
+By Capital Case
+[\s]*[b,B][y][\s]+#Incorrect usage of keyword BY
+[\s]*[b][y,Y][\s]+#Incorrect usage of keyword BY
+
+ForEach Capital Case
+[\s]+[F,f][O,o][R,r][E,e][A,a][C,c][h][\s]+#Incorrect usage of keyword FOREACH
+[\s]+[F,f][O,o][R,r][E,e][A,a][c][H,h][\s]+#Incorrect usage of keyword FOREACH
+[\s]+[F,f][O,o][R,r][E,e][a][C,c][H,h][\s]+#Incorrect usage of keyword FOREACH
+[\s]+[F,f][O,o][R,r][e][A,a][C,c][H,h][\s]+#Incorrect usage of keyword FOREACH
+[\s]+[F,f][O,o][r][E,e][A,a][C,c][H,h][\s]+#Incorrect usage of keyword FOREACH
+[\s]+[F,f][o][R,r][E,e][A,a][C,c][H,h][\s]+#Incorrect usage of keyword FOREACH
+[\s]+[f][O,o][R,r][E,e][A,a][C,c][H,h][\s]+#Incorrect usage of keyword FOREACH
+
+Generate Capital Case
+[\s]+[G,g][E,e][N,n][E,e][R,r][A,a][T,t][e][\s]+#Incorrect usage of keyword GENERATE
+[\s]+[G,g][E,e][N,n][E,e][R,r][A,a][t][E,e][\s]+#Incorrect usage of keyword GENERATE
+[\s]+[G,g][E,e][N,n][E,e][R,r][a][T,t][E,e][\s]+#Incorrect usage of keyword GENERATE
+[\s]+[G,g][E,e][N,n][E,e][r][A,a][T,t][E,e][\s]+#Incorrect usage of keyword GENERATE
+[\s]+[G,g][E,e][N,n][e][R,r][A,a][T,t][E,e][\s]+#Incorrect usage of keyword GENERATE
+[\s]+[G,g][E,e][n][E,e][R,r][A,a][T,t][E,e][\s]+#Incorrect usage of keyword GENERATE
+[\s]+[G,g][e][N,n][E,e][R,r][A,a][T,t][E,e][\s]+#Incorrect usage of keyword GENERATE
+[\s]+[g][E,e][N,n][E,e][R,r][A,a][T,t][E,e][\s]+#Incorrect usage of keyword GENERATE
+
+Using Load before Store
+[\s]+[S,s][t,T][O,o][R,r][E,e][\s]+[^~]*[L,l][O,o][A,a][D,d][\s]+#LOAD after STORE
+
+Parameterized delimiter in Pig 
+[\s]+[P][i][g][S][t][o][r][a][g][e][(]['][^$][a-z,A-Z,_,$,.]*['][)]#The  delimiter in PigStorage is not parameterized
+
+Parameterized HCatStorer 
+[\s]+[S,s][T,t][O,o][R,r][E,e][\s,\n,\t]+[^~]+[\s,\n,\t]+[I,i][N,n][T,t][o,O][\s,\n,\t]+['][^$][^~]+['][\s,\n,\t]+[U,u][S,s][I,i][N,n][G,g][\s]+[o][r][g][.][a][p][a][c][h][e][.][h][c][a][t][a][l][o][g][.][p][i][g][.][H][C][a][t][S][t][o][r][e][r][(][)]#Parameter in Hcatalog Storer
+
+Parameterized HatCatloader
+[\s]+[l,L][o,O][a,A][d,D][\s,\n,\t]+['][^$][^~]+['][\s,\n,\t]+[U,u][s,S][i,I][n,N][G,g][\s,\n,\t]+[o][r][g][.][a][p][a][c][h][e][.][h][c][a][t][a][l][o][g][.][p][i][g][.][H][C][a][t][L][o][a][d][e][r][(][)]#Parameter in HatCatloader
